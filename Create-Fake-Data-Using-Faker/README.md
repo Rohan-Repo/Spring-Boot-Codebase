@@ -23,10 +23,10 @@ This Spring Boot app generates and serves fake people data using the Faker libra
 ## Usage
 
 1. **Clone and run:**
-git clone https://github.com/Rohan-Repo/Spring-Boot-Codebase.git <br />
-cd Spring-Boot-Codebase/Create-Fake-Data-Using-Faker <br />
-mvn clean install <br />
-mvn spring-boot:run <br />
+- git clone https://github.com/Rohan-Repo/Spring-Boot-Codebase.git 
+- cd Spring-Boot-Codebase/Create-Fake-Data-Using-Faker 
+- mvn clean install 
+- mvn spring-boot:run 
 
 2. **Test APIs using the included Postman Collection.**
 
