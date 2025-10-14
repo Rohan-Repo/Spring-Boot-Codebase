@@ -1,0 +1,83 @@
+{
+	"info": {
+		"_postman_id": "514c0c8a-c12f-4461-975c-792bdd792f7d",
+		"name": "FakeData-API-Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8992760"
+	},
+	"item": [
+		{
+			"name": "Get All People",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/people/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"people",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find by FirstName and LastName",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/people/findBy?fName=Devon&lName=Nolan",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"people",
+						"findBy"
+					],
+					"query": [
+						{
+							"key": "fName",
+							"value": "Devon"
+						},
+						{
+							"key": "lName",
+							"value": "Nolan"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get-SQL-Query-Data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/people/details",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"people",
+						"details"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

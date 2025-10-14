@@ -1,0 +1,9 @@
+spring.application.name=create-fake-data
+spring.h2.console.enabled=true
+spring.datasource.generate-unique-name=false
+spring.datasource.name=people
+spring.datasource.url=jdbc:h2:mem:people
+spring.datasource.driver-class-name=org.h2.Driver
+spring.datasource.username=sa
+spring.datasource.password=
+spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
