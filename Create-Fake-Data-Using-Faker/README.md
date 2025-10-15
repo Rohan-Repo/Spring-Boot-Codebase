@@ -1,6 +1,6 @@
 # Create Fake Data Using Faker (Spring Boot App)
 
-## Based on a similar Video by (Dan Vega - Faker Data App)[https://www.youtube.com/watch?v=UzBOv_SHUng]
+## Based on a similar Video by [Dan Vega - Faker Data App](https://www.youtube.com/watch?v=UzBOv_SHUng)
 
 This Spring Boot app generates and serves fake people data using the Faker library, ideal for development and testing.
 
