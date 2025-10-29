@@ -40,7 +40,7 @@ This Spring Boot app generates and serves fake people data using the Faker libra
 ## Contents
 - Data files
 - Postman Collection for API testing
-- Swagger JSON Config File
+- Swagger API Docs JSON File
 
 ## License
 
