@@ -37,7 +37,7 @@ This app exposes a set of GET endpoints to access randomly generated user data (
 
 1. **Clone and Run:**
 git clone https://github.com/Rohan-Repo/Spring-Boot-Codebase.git
-cd Spring-Boot-Codebase/Create-Fake-Data-Using-Faker
+cd Spring-Boot-Codebase/Create-Fake-Data-Using-Faker/SB-Code/create-fake-data-2
 mvn clean install
 mvn spring-boot:run
 
