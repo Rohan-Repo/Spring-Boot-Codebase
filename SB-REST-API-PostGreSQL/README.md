@@ -26,10 +26,11 @@ This API enables the creation, reading, updating, and deletion (CRUD) of TV show
 1. **Clone the Repository**
 
 1. **Clone and Run:**
+   
 git clone https://github.com/Rohan-Repo/Spring-Boot-Codebase.git <br />
 cd Spring-Boot-Codebase/SB-REST-API-PostGreSQL/SB-Code/showcastdb-rest-api <br />
 
-2. **Build and Start**
+3. **Build and Start**
 
 mvn clean install <br />
 mvn spring-boot:run <br />
