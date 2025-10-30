@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Error - Something Went Wrong</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            color: #32243d;
+            font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: #ffffffcc;
+            border-radius: 16px;
+            padding: 40px 32px;
+            box-shadow: 0 4px 32px rgba(84, 49, 135, 0.15);
+            max-width: 500px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 2.5rem;
+            color: #fa9474;
+            margin-bottom: 16px;
+        }
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+        .home-btn {
+            background-color: #fa9474;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 8px;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: background 0.2s;
+        }
+        .home-btn:hover {
+            background-color: #32243d;
+        }
+        .emoji {
+            font-size: 3rem;
+            margin-bottom: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="emoji">🚨</div>
+        <h1>Oops! Something went wrong</h1>
+        <p>
+            We couldn't process your request.<br>
+            Please try again or head back to the homepage.
+        </p>
+        <a href="/" class="home-btn">Go Home</a>
+    </div>
+</body>
+</html>
