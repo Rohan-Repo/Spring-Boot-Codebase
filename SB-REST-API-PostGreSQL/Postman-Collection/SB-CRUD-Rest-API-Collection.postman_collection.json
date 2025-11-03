@@ -281,6 +281,27 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "Get Actor Details Without ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/showactors/details",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"showactors",
+						"details"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }

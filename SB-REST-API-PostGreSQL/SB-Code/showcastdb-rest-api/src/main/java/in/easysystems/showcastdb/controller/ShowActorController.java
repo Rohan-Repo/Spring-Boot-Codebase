@@ -1,5 +1,6 @@
 package in.easysystems.showcastdb.controller;
 
+import in.easysystems.showcastdb.dto.ActorDetailsDTO;
 import in.easysystems.showcastdb.dto.ActorShowNameUpdateDTO;
 import in.easysystems.showcastdb.dto.RESTAPIResponse;
 import in.easysystems.showcastdb.dto.ShowActorDTO;
@@ -231,5 +232,23 @@ public class ShowActorController {
         );
 
         return ResponseEntity.status( HttpStatus.OK ).body( response );
+    }
+
+    @Operation(
+            summary = "List all actors in the database without ID",
+            description = "Returns a collection of all TV show cast members and their roles currently available in the database besides the actorId field."
+    )
+    @ApiResponses({
+            @ApiResponse(responseCode = "200", description = "Successful retrieval of actor data",
+                    content = @Content(
+                            mediaType = "application/json",
+                            array = @ArraySchema( schema = @Schema(implementation = ActorDetailsDTO.class) )
+                    )
+            )
+    })
+    @GetMapping( "/details")
+    public ResponseEntity<List<ActorDetailsDTO>> getActorDetails(){
+        List<ActorDetailsDTO> actorDetailsWithoutId = actorService.getActorDetailsWithoutId();
+        return ResponseEntity.ok( actorDetailsWithoutId );
     }
 }

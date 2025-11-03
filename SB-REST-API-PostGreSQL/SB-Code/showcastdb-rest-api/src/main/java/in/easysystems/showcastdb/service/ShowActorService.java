@@ -1,6 +1,7 @@
 package in.easysystems.showcastdb.service;
 
 
+import in.easysystems.showcastdb.dto.ActorDetailsDTO;
 import in.easysystems.showcastdb.dto.ShowActorDTO;
 
 import java.util.List;
@@ -19,4 +20,6 @@ public interface ShowActorService {
     void updateActorShowName( UUID showActorId, String nameToUpdate );
 
     void deleteActor( UUID idToDelete );
+
+    List<ActorDetailsDTO> getActorDetailsWithoutId();
 }
