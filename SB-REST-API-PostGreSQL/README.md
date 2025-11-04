@@ -49,6 +49,7 @@ Ensure your PostgreSQL is running, Database and the User is created before start
 | GET    | `/api/showactors`               | List all actors in the database                       |
 | POST   | `/api/showactors`               | Add a new actor (show name, role, real name)          |
 | GET    | `/api/showactors/{id}`          | Retrieve actor details by unique UUID                 |
+| GET    | `/api/showactors/details`       | Retrieve actor details without the actorID field      |
 | PUT    | `/api/showactors/{id}`          | Update actor information (all fields)                 |
 | PATCH  | `/api/showactors/{id}`          | Update an actor's character name                      |
 | DELETE | `/api/showactors/{id}`          | Remove an actor from the database                     |
