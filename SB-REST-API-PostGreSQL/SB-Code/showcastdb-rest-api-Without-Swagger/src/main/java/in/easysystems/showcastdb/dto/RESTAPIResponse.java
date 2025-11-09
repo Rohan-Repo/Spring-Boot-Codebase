@@ -1,14 +1,13 @@
 package in.easysystems.showcastdb.dto;
 
-import java.time.LocalDateTime;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 
 public record RESTAPIResponse(
-  int httpStatusCode,
-  String responseStatus,
-  String responseMessage,
-  String timestamp
+        int httpStatusCode,
+        String responseStatus,
+        String responseMessage,
+        String timestamp
 )
 {
     public RESTAPIResponse( int httpStatusCode, String responseStatus, String responseMessage ){
@@ -16,5 +15,5 @@ public record RESTAPIResponse(
                 httpStatusCode, responseStatus, responseMessage,
                 ZonedDateTime.now().format( DateTimeFormatter.ofPattern("yyyy-MMM-dd HH:mm:ss z") )
         );
-    }
+}
 }

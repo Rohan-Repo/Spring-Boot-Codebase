@@ -1,5 +1,6 @@
 package in.easysystems.showcastdb.service.impl;
 
+import in.easysystems.showcastdb.dto.ActorDetailsDTO;
 import in.easysystems.showcastdb.dto.ShowActorDTO;
 import in.easysystems.showcastdb.entity.ShowActor;
 import in.easysystems.showcastdb.exceptions.ResourceNotFoundException;
@@ -13,6 +14,7 @@ import org.springframework.stereotype.Service;
 import java.nio.file.ReadOnlyFileSystemException;
 import java.util.List;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 // Implementation Class for ShowActorService Interface to add our business logic
 @Service
@@ -126,6 +128,21 @@ public class ShowActorServiceImpl implements ShowActorService {
                 () ->  new ResourceNotFoundException( "Actor with ID : " + idToDelete.toString() + " was not found!" ));
 
         actorRepository.deleteById( idToDelete );
+    }
+
+    @Override
+    public List<ActorDetailsDTO> getActorDetailsWithoutId() {
+
+        List<ShowActorDTO> actorsWithId = getAllActors();
+
+        return
+                actorsWithId
+                        .stream()
+                        .map(
+                                actor ->
+                                        new ActorDetailsDTO( actor.actorRealName(), actor.actorShowName(), actor.showName() )
+                        )
+                        .collect( Collectors.toList() );
     }
 
 }

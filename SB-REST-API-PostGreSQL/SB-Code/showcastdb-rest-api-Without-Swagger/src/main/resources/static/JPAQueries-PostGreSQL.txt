@@ -19,5 +19,19 @@ update show_character_actor_names sa1_0 set actor_show_name=? where sa1_0.actor_
 Hibernate UPDATE All:
 select sa1_0.actor_id,sa1_0.actor_real_name,sa1_0.actor_show_name,sa1_0.show_name from show_character_actor_names sa1_0 where sa1_0.actor_id=?
 
+Hibernate: insert into show_character_actor_names (actor_real_name,actor_show_name,show_name,actor_id) values (?,?,?,?)
+Hibernate: select sa1_0.actor_id,sa1_0.actor_real_name,sa1_0.actor_show_name,sa1_0.show_name from show_character_actor_names sa1_0 where sa1_0.actor_id=?
+Hibernate: select sa1_0.actor_id,sa1_0.actor_real_name,sa1_0.actor_show_name,sa1_0.show_name from show_character_actor_names sa1_0 where sa1_0.actor_id=?
+Hibernate: select sa1_0.actor_id,sa1_0.actor_real_name,sa1_0.actor_show_name,sa1_0.show_name from show_character_actor_names sa1_0 where sa1_0.actor_id=?
+Hibernate: select sa1_0.actor_id,sa1_0.actor_real_name,sa1_0.actor_show_name,sa1_0.show_name from show_character_actor_names sa1_0 where sa1_0.actor_id=?
+Hibernate: select sa1_0.actor_id,sa1_0.actor_real_name,sa1_0.actor_show_name,sa1_0.show_name from show_character_actor_names sa1_0 order by sa1_0.show_name desc
+Hibernate: update show_character_actor_names sa1_0 set actor_show_name=? where sa1_0.actor_id=?
+Hibernate: update show_character_actor_names sa1_0 set actor_show_name=? where sa1_0.actor_id=?
+Hibernate: select sa1_0.actor_id,sa1_0.actor_real_name,sa1_0.actor_show_name,sa1_0.show_name from show_character_actor_names sa1_0 where sa1_0.actor_id=?
+Hibernate: select sa1_0.actor_id,sa1_0.actor_real_name,sa1_0.actor_show_name,sa1_0.show_name from show_character_actor_names sa1_0 where sa1_0.actor_id=?
+Hibernate: select sa1_0.actor_id,sa1_0.actor_real_name,sa1_0.actor_show_name,sa1_0.show_name from show_character_actor_names sa1_0 order by sa1_0.show_name desc
+Hibernate: select sa1_0.actor_id,sa1_0.actor_real_name,sa1_0.actor_show_name,sa1_0.show_name from show_character_actor_names sa1_0 where sa1_0.actor_id=?
+Hibernate: delete from show_character_actor_names where actor_id=?
+
 
 

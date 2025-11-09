@@ -1,17 +1,15 @@
 package in.easysystems.showcastdb.controller;
 
+
+import in.easysystems.showcastdb.dto.ActorDetailsDTO;
 import in.easysystems.showcastdb.dto.ActorShowNameUpdateDTO;
 import in.easysystems.showcastdb.dto.RESTAPIResponse;
 import in.easysystems.showcastdb.dto.ShowActorDTO;
 import in.easysystems.showcastdb.service.ShowActorService;
-import in.easysystems.showcastdb.service.impl.ShowActorServiceImpl;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.time.LocalDateTime;
 import java.util.List;
 import java.util.UUID;
 
@@ -85,8 +83,8 @@ public class ShowActorController {
     // Update: How to modify existing records. SQL Keywords: UPDATE
     // HTTP PATCH Method will be used here because we are updating the actorShowName and NOT the entire object
     @PatchMapping("/{id}")
-    public ResponseEntity<RESTAPIResponse> updateActorShowName(@PathVariable UUID id, @RequestBody ActorShowNameUpdateDTO nameUpdateDTO) {
-        actorService.updateActorShowName( id, nameUpdateDTO.actorShowName() );
+    public ResponseEntity<RESTAPIResponse> updateActorShowName(@PathVariable UUID id, @RequestBody ActorShowNameUpdateDTO actorShowNameUpdateDTO) {
+        actorService.updateActorShowName( id, actorShowNameUpdateDTO.actorShowName() );
 
         // If Update was unsuccessful we have handled the 404 Error in our Service class if it returns here then it means it was successful
 
@@ -112,5 +110,12 @@ public class ShowActorController {
         );
 
         return ResponseEntity.status( HttpStatus.OK ).body( response );
+    }
+
+    
+    @GetMapping( "/details")
+    public ResponseEntity<List<ActorDetailsDTO>> getActorDetails(){
+        List<ActorDetailsDTO> actorDetailsWithoutId = actorService.getActorDetailsWithoutId();
+        return ResponseEntity.ok( actorDetailsWithoutId );
     }
 }
