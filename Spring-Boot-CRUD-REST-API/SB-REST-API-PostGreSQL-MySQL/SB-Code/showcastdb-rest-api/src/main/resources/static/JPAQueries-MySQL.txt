@@ -1,0 +1,28 @@
+Hibernate CREATE TABLE:
+create table show_character_actor_names (actor_id binary(16) not null, actor_real_name varchar(255) not null, actor_show_name varchar(255), show_name varchar(255) not null, primary key (actor_id)) engine=InnoDB
+
+Hibernate ALTER : alter table show_character_actor_names modify column actor_id binary(40) not null
+
+By Default:
+create table show_character_actor_names (actor_id binary(40) not null, actor_real_name varchar(255) not null, actor_show_name varchar(255), show_name varchar(255) not null, primary key (actor_id)) engine=InnoDB
+
+Hibernate INSERT:
+insert into show_character_actor_names (actor_real_name,actor_show_name,show_name,actor_id) values (?,?,?,?)
+
+Hibernate SELECT :
+select sa1_0.actor_id,sa1_0.actor_real_name,sa1_0.actor_show_name,sa1_0.show_name from show_character_actor_names sa1_0 where sa1_0.actor_id=?
+
+Hibernate SELECT All:
+select sa1_0.actor_id,sa1_0.actor_real_name,sa1_0.actor_show_name,sa1_0.show_name from show_character_actor_names sa1_0
+
+Hibernate SELECT ALL ORDER BY :
+select sa1_0.actor_id,sa1_0.actor_real_name,sa1_0.actor_show_name,sa1_0.show_name from show_character_actor_names sa1_0 order by sa1_0.show_name desc
+
+Hibernate UPDATE ShowName:
+update show_character_actor_names sa1_0 set actor_show_name=? where sa1_0.actor_id=?
+
+Hibernate UPDATE All:
+select sa1_0.actor_id,sa1_0.actor_real_name,sa1_0.actor_show_name,sa1_0.show_name from show_character_actor_names sa1_0 where sa1_0.actor_id=?
+
+
+

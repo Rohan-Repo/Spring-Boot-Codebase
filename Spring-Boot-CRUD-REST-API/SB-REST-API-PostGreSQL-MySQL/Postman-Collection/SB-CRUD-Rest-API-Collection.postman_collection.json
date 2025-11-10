@@ -1,0 +1,307 @@
+{
+	"info": {
+		"_postman_id": "8e780ad5-fc31-4461-bc38-f56fb487fed4",
+		"name": "SB-CRUD-Rest-API-Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8992760"
+	},
+	"item": [
+		{
+			"name": "Create Actor",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"showName\" : \"Ted Lasso\",\r\n    \"actorShowName\" : \"Ted Lasso\",\r\n    \"actorRealName\" : \"Jason Sudeikis\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/showactors/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"showactors",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Actor - Successful",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"showName\" : \"Man with a Plan\",\r\n    \"actorShowName\" : \"Adam Burns\",\r\n    \"actorRealName\" : \"Matt Leblanc\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/showactors/8af34e68-0ea4-4e4c-8560-4d9444b86d90",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"showactors",
+						"8af34e68-0ea4-4e4c-8560-4d9444b86d90"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Actor - Failed",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"showName\" : \"Man with a Plan\",\r\n    \"actorShowName\" : \"Adam Burns\",\r\n    \"actorRealName\" : \"Matt Leblanc\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/showactors/2a26e894-67c9-446d-8c42-9f87f5303f5f",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"showactors",
+						"2a26e894-67c9-446d-8c42-9f87f5303f5f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Actor By ID - Success",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/showactors/401a2914-6f1c-4249-8734-f0be6b43ee3c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"showactors",
+						"401a2914-6f1c-4249-8734-f0be6b43ee3c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Actor By ID - Failed",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/showactors/ced7ae15-5dd3-48fc-a8ce-8d7508607e61",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"showactors",
+						"ced7ae15-5dd3-48fc-a8ce-8d7508607e61"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Actor By ID - Malformed/Short",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/showactors/ced7ae15-5dd3-48fc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"showactors",
+						"ced7ae15-5dd3-48fc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Actors",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/showactors/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"showactors",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Actor's ShowName - Failed",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"actorShowName\" : \"Regina Philange\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/showactors/2a26e894-67c9-446d-8c42-9f87f5303f5f",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"showactors",
+						"2a26e894-67c9-446d-8c42-9f87f5303f5f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Actor's ShowName - Successful",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"actorShowName\" : \"Ms. Chanandler Bong\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/showactors/401a2914-6f1c-4249-8734-f0be6b43ee3c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"showactors",
+						"401a2914-6f1c-4249-8734-f0be6b43ee3c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Actor By ID - Failed",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/showactors/2a26e894-67c9-446d-8c42-9f87f5303f5f",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"showactors",
+						"2a26e894-67c9-446d-8c42-9f87f5303f5f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Actor By ID - Successful",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/showactors/1c16c0e5-71e7-4f7f-9934-a497cdf505d2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"showactors",
+						"1c16c0e5-71e7-4f7f-9934-a497cdf505d2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Actor Details Without ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/showactors/details",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"showactors",
+						"details"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
