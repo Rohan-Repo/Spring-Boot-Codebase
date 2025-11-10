@@ -8,7 +8,7 @@ A curated collection of Spring Boot projects to showcase practical expertise in 
 
 ### 1. **ShowCastDB CRUD REST API**
 - A complete CRUD API for managing TV show cast and actor data.
-- Stack: Spring Boot, Spring Data JPA, PostgreSQL, Swagger/OpenAPI
+- Stack: Spring Boot, Spring Data JPA, PostgreSQL, MySQL, Swagger/OpenAPI
 - Features interactive Swagger UI and ready-to-import Postman collection.
 - Example Endpoints:
     - `GET /api/showactors` – List all actors
@@ -31,7 +31,7 @@ A curated collection of Spring Boot projects to showcase practical expertise in 
 - Comprehensive OpenAPI/Swagger documentation for all APIs
 - Postman collections provided for instant API testing
 - Uses Faker for realistic test data creation
-- Includes examples for database integration (JPA/SQL, H2, PostgreSQL)
+- Includes examples for database integration (JPA/SQL, H2, PostgreSQL, MySQL)
 - Licensed under Apache-2.0
 
 ---
@@ -44,7 +44,7 @@ git clone https://github.com/Rohan-Repo/Spring-Boot-Codebase.git
 
 2. **Navigate to your project of choice**
 - For CRUD API:  
-  `cd Spring-Boot-Codebase/Create-ShowCastDB-CRUD-API`
+  `cd Spring-Boot-Codebase/Spring-Boot-CRUD-REST-API`
 - For Faker API:  
   `cd Spring-Boot-Codebase/Create-Fake-Data-Using-Faker`
 3. **Run with Maven**
