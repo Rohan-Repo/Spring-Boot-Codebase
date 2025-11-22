@@ -6,7 +6,7 @@ A Spring Boot REST API for streamlined CRUD management of TV show cast and actor
 
 ## Overview
 
-This API enables the creation, reading, updating, and deletion (CRUD) of TV show cast and actor records. The backend service uses Spring Boot, JPA, MySQLDB and PostgreSQL, with OpenAPI/Swagger integration for seamless API documentation and testing.
+This API enables the creation, reading, updating, and deletion (CRUD) of TV show cast and actor records. The backend service uses Spring Boot, JPA, MySQLDB, MS-SQLDB and PostgreSQL, with OpenAPI/Swagger integration for seamless API documentation and testing.
 
 ---
 
@@ -16,6 +16,7 @@ This API enables the creation, reading, updating, and deletion (CRUD) of TV show
 - **Spring Data JPA**
 - **PostgreSQL**
 - **MySQL**
+- **MS SQL Server**
 - **Springdoc OpenAPI/Swagger UI**
 - **Postman (for test collection)**
 - **Java 21** (configurable via `pom.xml`)
@@ -29,7 +30,7 @@ This API enables the creation, reading, updating, and deletion (CRUD) of TV show
 1. **Clone and Run:**
    
 git clone https://github.com/Rohan-Repo/Spring-Boot-Codebase.git <br />
-cd Spring-Boot-Codebase/Spring-Boot-CRUD-REST-API/SB-REST-API-PostGreSQL-MySQL/SB-Code/showcastdb-rest-api <br />
+cd Spring-Boot-Codebase/Spring-Boot-CRUD-REST-API/SB-REST-API-PostGreSQL-MySQL-SQLServer/SB-Code/showcastdb-rest-api <br />
 
 3. **Build and Start**
 
@@ -40,11 +41,11 @@ mvn spring-boot:run <br />
 
 ## Database Profile Selection and Setup
 
-To select the database profile for the application, specify `spring.profiles.active=postgresql` in the `application.properties` file to use PostgreSQL, or `spring.profiles.active=mysql` to use MySQL. <br />
-**Separate `application-mysql.properties` and `application-postgresql.properties` files already created**
+To select the database profile for the application, specify `spring.profiles.active=postgresql` in the `application.properties` file to use PostgreSQL, or `spring.profiles.active=mysql` to use MySQL or `spring.profiles.active=mssqlserver` to use MS-SQL Server. <br />
+**Separate `application-mysql.properties`, `application-mssqlserver.properties` and `application-postgresql.properties` files already created**
 
 - **MySQL:** Only the database user must be created manually; both the database and tables are automatically managed by Spring Boot JPA.
-- **PostgreSQL:** You must manually create both the user and the database, while Spring Boot JPA will handle table creation.
+- **PostgreSQL and MS SQL Server:** You must manually create both the user and the database, while Spring Boot JPA will handle table creation.
 ---
 
 ## API Endpoints
@@ -93,7 +94,7 @@ To select the database profile for the application, specify `spring.profiles.act
 
 ## Files Included
 
-- `pom.xml` - All dependencies preconfigured for Spring Boot, Spring Data JPA, Swagger/OpenAPI, MySQLDB and PostgreSQLDB
+- `pom.xml` - All dependencies preconfigured for Spring Boot, Spring Data JPA, Swagger/OpenAPI, MySQLDB, MS-SQL Server and PostgreSQLDB
 - `crud-REST-api-docs-final.json` - OpenAPI/Swagger spec for endpoints and models
 - `SB-CRUD-Rest-API-Collection.postman_collection.json` - Postman collection for quick API testing
 
