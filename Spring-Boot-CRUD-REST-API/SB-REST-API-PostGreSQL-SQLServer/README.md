@@ -6,7 +6,7 @@ A Spring Boot REST API for streamlined CRUD management of TV show cast and actor
 
 ## Overview
 
-This API enables the creation, reading, updating, and deletion (CRUD) of TV show cast and actor records. The backend service uses Spring Boot, JPA, and PostgreSQL, with OpenAPI/Swagger integration for seamless API documentation and testing.
+This API enables the creation, reading, updating, and deletion (CRUD) of TV show cast and actor records. The backend service uses Spring Boot, JPA, MS-SQL Server and PostgreSQL, with OpenAPI/Swagger integration for seamless API documentation and testing.
 
 ---
 
@@ -15,6 +15,7 @@ This API enables the creation, reading, updating, and deletion (CRUD) of TV show
 - **Spring Boot 4**
 - **Spring Data JPA**
 - **PostgreSQL**
+- **MS-SQL Server**
 - **Springdoc OpenAPI/Swagger UI**
 - **Postman (for test collection)**
 - **Java 21** (configurable via `pom.xml`)
@@ -28,7 +29,7 @@ This API enables the creation, reading, updating, and deletion (CRUD) of TV show
 1. **Clone and Run:**
    
 git clone https://github.com/Rohan-Repo/Spring-Boot-Codebase.git <br />
-cd Spring-Boot-Codebase/Spring-Boot-CRUD-REST-API/SB-REST-API-PostGreSQL/SB-Code/showcastdb-rest-api <br />
+cd Spring-Boot-Codebase/Spring-Boot-CRUD-REST-API/SB-REST-API-PostGreSQL-SQLServer/SB-Code/showcastdb-rest-api <br />
 
 3. **Build and Start**
 
@@ -38,7 +39,8 @@ mvn spring-boot:run <br />
 
 3. **PostgreSQL Setup**
 
-Ensure your PostgreSQL is running, Database and the User is created before starting the Coding and configured in your `application.properties`. PostgreSQL DB Configrtaion file is separate `application-postgresql.properties`.
+Ensure your PostgreSQL is running, Database and the User is created before starting the Coding and configured in your `application.properties`. <br />
+PostgreSQL DB Configrtaion file is separate `application-postgresql.properties` and MS-SQL DB Configrtaion file is separate `application-mssqlserver.properties`. <br />
 
 ---
 
@@ -88,7 +90,7 @@ Ensure your PostgreSQL is running, Database and the User is created before start
 
 ## Files Included
 
-- `pom.xml` - All dependencies preconfigured for Spring Boot, Spring Data JPA, Swagger/OpenAPI, and PostgreSQL
+- `pom.xml` - All dependencies preconfigured for Spring Boot, Spring Data JPA, Swagger/OpenAPI, MS-SQL Server and PostgreSQL
 - `crud-REST-api-docs-final.json` - OpenAPI/Swagger spec for endpoints and models
 - `SB-CRUD-Rest-API-Collection.postman_collection.json` - Postman collection for quick API testing
 
