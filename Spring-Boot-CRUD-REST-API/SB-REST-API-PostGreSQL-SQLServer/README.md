@@ -37,9 +37,9 @@ mvn clean install <br />
 mvn spring-boot:run <br />
 
 
-3. **PostgreSQL Setup**
+3. **Database Profile Selection and Setup**
 
-Ensure your PostgreSQL is running, Database and the User is created before starting the Coding and configured in your `application.properties`. <br />
+Ensure your PostgreSQL and MS SQL Server is running, Database and the User is created before starting the Coding and configured in your `application.properties`. <br />
 PostgreSQL DB Configrtaion file is separate `application-postgresql.properties` and MS-SQL DB Configrtaion file is separate `application-mssqlserver.properties`. <br />
 
 ---
