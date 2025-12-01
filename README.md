@@ -8,7 +8,7 @@ A curated collection of Spring Boot projects to showcase practical expertise in 
 
 ### 1. **ShowCastDB CRUD REST API**
 - A complete CRUD API for managing TV show cast and actor data.
-- Stack: Spring Boot, Spring Data JPA, PostgreSQL, MySQL, Swagger/OpenAPI
+- Stack: Spring Boot, Spring Data JPA, PostgreSQL, MySQL, MS-SQL Server, Swagger/OpenAPI
 - Features interactive Swagger UI and ready-to-import Postman collection.
 - Example Endpoints:
     - `GET /api/showactors` – List all actors
